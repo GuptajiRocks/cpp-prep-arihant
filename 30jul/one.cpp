@@ -6,6 +6,6 @@
 using namespace std;
 
 int main() {
-    cout << "Hello World" << endl;
+    printf("This is my first c++ Program");
     return 0;
 }
