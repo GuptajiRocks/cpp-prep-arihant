@@ -12,7 +12,7 @@ void try1() {
     }
 
     for (int j = 0; j < 5; j++) {
-        cout << arr[j];
+        cout << arr[j] << endl;
     }
 }
 
