@@ -25,6 +25,20 @@ void app1() {
     }
 }
 
+// Since this goddamn language does not have a proper method to count the elements in array, if thought of implementing
+// an existing trick
+
+void array_len_counter() {
+    int arr[10] = {100,200,300,400,500,600,700,800,900,1000};
+    int x = sizeof(arr)/sizeof(arr[0]);
+    int y = size(arr);
+    cout << y << endl;
+    cout << x << endl;
+
+    // Turns out, there was a goddamn function named 'size'....LOL
+}
 int main() {
-    app1();
+    // app1();
+
+    array_len_counter();
 }
