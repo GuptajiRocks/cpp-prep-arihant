@@ -10,7 +10,7 @@ using namespace std;
 class banking {
 public:
     banking() {
-
+        //
     }
 private:
     int cid;
@@ -48,18 +48,61 @@ public:
 
         if (choice == "Y") {
             accbal = accbal - amt;
-            cout << "Update balance is: " << accbal;
+            cout << "Updated balance is: " << accbal << endl;
         }
+    }
+
+    void display_details() {
+        cout << "Your name is: " << cname << endl;
+        cout << "Your Phone Number is: " << cid << endl;
+        cout << "Your current account balance stands at: " << accbal << endl;
     }
 
 };
 
 int main() {
-    while (true) {
+    static int choice;
+    static banking b[10];
+
+    while(true) {
         cout << "Welcome to the program.." << endl;
-        cout << "Press 1 to Create Object: " << endl;
+        cout << "Press 1 to Create Account " << endl;
+        cout << "Press 2 to Deposit" << endl;
+        cout << "Press 3 to Withdraw" << endl;
+        cout << "Press 4 to Display Just Balance" << endl;
+        cout << "Press 5 to Display Whole Details" << endl;
 
+        cin >> choice;
 
+        if (choice == 1) {
+            string customername;
+            int custid;
+            cout << "Enter name of customer: ";
+            cin >> customername;
+            cout << endl;
+            cout << "Enter Phone Number: ";
+            cin >> custid;
+            cout << endl;
+
+            b[0] = banking(custid, customername);
+
+        } else if(choice == 2) {
+            int amt;
+            cout << "Enter amount to deposit: " << endl;
+            cin >> amt;
+            b[0].deposit(amt);
+        } else if(choice == 3) {
+            int amt;
+            cout << "Enter amount to withdraw: " << endl;
+            cin >> amt;
+            b[0].withdraw(amt);
+        } else if(choice == 4) {
+            b[0].display_balance();
+        } else if(choice == 5) {
+            b[0].display_details();
+        } else {
+            break;
+        }
 
     }
 }
