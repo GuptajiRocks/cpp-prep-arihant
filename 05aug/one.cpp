@@ -8,6 +8,10 @@ using namespace std;
 // my OG banking details object creating program
 
 class banking {
+public:
+    banking() {
+
+    }
 private:
     int cid;
     string cname;
@@ -48,6 +52,14 @@ public:
         }
     }
 
-
-
 };
+
+int main() {
+    while (true) {
+        cout << "Welcome to the program.." << endl;
+        cout << "Press 1 to Create Object: " << endl;
+
+
+
+    }
+}
