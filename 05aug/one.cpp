@@ -1,5 +1,5 @@
 //
-// Created by ariha on 01-08-2024.
+// Created by ariha on 05-08-2024.
 //
 
 #include <iostream>
@@ -28,8 +28,25 @@ public:
         }
     }
 
+    void display_balance() {
+        cout << "Your account balance is: " << accbal << endl;
+    }
 
+    void deposit(int amt) {
+        accbal = accbal + amt;
+    }
 
+    void withdraw(int amt) {
+        cout << "The amount to withdraw is: " << amt << endl;
+        string choice;
+        cout << "To proceed press Y: ";
+        cin >> choice;
+
+        if (choice == "Y") {
+            accbal = accbal - amt;
+            cout << "Update balance is: " << accbal;
+        }
+    }
 
 
 
