@@ -100,6 +100,7 @@ public:
 
 int main() {
     cout << "Welcome to the Skibidi Program" << endl;
+    vector<rizzler> rizzarray;
 
     
 }
