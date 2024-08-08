@@ -6,6 +6,7 @@
  * Mixing genz terminology with skibidi */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class rizzler {
@@ -15,6 +16,8 @@ public:
     int gyattlevel;
     int baddiecounter = 0;
     int rizz = 0;
+    vector<string> rizzfood;
+
 
     rizzler(string name, int gyattlevel, string baddie) {
         this->name = name;
@@ -67,7 +70,37 @@ public:
     }
 
     void foodAdd() {
+        string temp;
+        int templen;
+        cout << "Tell me how many food do you eat?: " << endl;
+        for (int i = 0; i < templen; i++) {
+            cout << "Enter the food: " << endl;
+            cin >> temp;
+            rizzfood.push_back(temp);
+        }
 
+        if (rizzfood.size() > 5) {
+            cout << "Your selected foods are:" << endl;
+            for (int i = 0; i < rizzfood.size(); i++) {
+                cout << rizzfood[i] << endl;
+            }
+        } else {
+            cout << "Eat more you slow ahh fat skibidi" << endl;
+            cout << "All your previous food has been deleted. Hahahahahaha" << endl;
+            rizzfood.clear();
+        }
+    }
+
+    void displayFood() {
+        for (int i = 0; i < rizzfood.size(); i++) {
+            cout << rizzfood[i] << endl;
+        }
     }
 };
+
+int main() {
+    cout << "Welcome to the Skibidi Program" << endl;
+
+    
+}
 
