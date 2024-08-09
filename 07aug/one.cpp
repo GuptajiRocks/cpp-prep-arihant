@@ -26,19 +26,19 @@ public:
     }
 
     // Creating an array of the baddies this rizzler likes
-    string baddiearray[10];
+    vector<string> baddiearray;
     string rizzdiag[] = {"Are you from tenessee, cause' your the only 10 I see.", "Girl, you so fine, Imma make you mine", "You're contagious like the flu, and I wanna stick together as glue"};
 
     void addBaddie() {
-        cout << "Do you want to add a baddie?: " << endl;
+        cout << "Adding a Baddie fr fr on Ohio not Skibidi: " << endl;
         string addb;
         cin >> addb;
-        baddiearray[baddiecounter] = addb;
+        baddiearray.push_back(addb);
         baddiecounter = baddiecounter + 1;
     }
 
     void getRizz() {
-        if (baddiecounter > 2 && gyattlevel > 10) {
+        if (baddiecounter >= 2 && gyattlevel > 10) {
             cout << rizzdiag[0] << endl;
         } else {
             cout << "Go away you alpha, you got no rizz" << endl;
@@ -96,12 +96,21 @@ public:
             cout << rizzfood[i] << endl;
         }
     }
+
+    void getBaddie() {
+        for (int i = 0; i < baddiearray.size(); i++) {
+            cout << baddiearray[i] << endl;
+        }
+    }
 };
 
 int main() {
     cout << "Welcome to the Skibidi Program" << endl;
     vector<rizzler> rizzarray;
-
-    
+    rizzarray.push_back(rizzler("Arihant",100,"VRC"));
+    rizzarray[0].addBaddie();
+    rizzarray[0].foodAdd();
+    rizzarray[0].getRizz();
+    rizzarray[0].getBaddie();
 }
 
