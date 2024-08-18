@@ -11,9 +11,7 @@
 using namespace std;
 
 int recalc() {
-
-
-
+    cout << "Nothing" << endl;
 }
 int main() {
     string temp;
