@@ -12,6 +12,14 @@ void checkerone() {
     cout << p << endl;
     cout << *p << endl;
 }
+
+struct Value {
+    int x,y;
+};
+
 int main() {
-    checkerone();
+    // checkerone();
+    Value v1 = {1,2};
+    Value* v2 = &v1;
+    cout << v2->x << " " << v2->y << endl;
 }
