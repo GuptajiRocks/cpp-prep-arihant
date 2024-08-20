@@ -8,7 +8,7 @@ using namespace std;
 
 // Program for bubble sort
 
-void sortings(vector<int> arr) {
+void sortings(vector<int>& arr) {
     int len = arr.size();
     bool swapp;
 
@@ -25,15 +25,14 @@ void sortings(vector<int> arr) {
             break;
         }
     }
-
-    for (int num : arr) {
-        cout << num << " ";
-    }
 }
 
 int main() {
     vector<int> arr = {17,19,22,1,0,45};
 
     sortings(arr);
+    for (int num : arr) {
+        cout << num << " ";
+    }
 
 }
