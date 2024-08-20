@@ -3,12 +3,13 @@
 //
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // Program for bubble sort
 
-void sorting(int arr[]) {
-    int len = sizeof(arr)/sizeof(arr[0]);
+void sortings(vector<int> arr) {
+    int len = arr.size();
     bool swapp;
 
     for (int i = 0; i<len-1; i++) {
@@ -19,15 +20,20 @@ void sorting(int arr[]) {
                 swap(arr[j], arr[j+1]);
                 swapp = true;
             }
-
         }
-
         if (!swapp) {
             break;
         }
     }
+
+    for (int num : arr) {
+        cout << num << " ";
+    }
 }
 
 int main() {
+    vector<int> arr = {17,19,22,1,0,45};
+
+    sortings(arr);
 
 }
