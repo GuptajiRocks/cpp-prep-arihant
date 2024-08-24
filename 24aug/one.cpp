@@ -12,11 +12,11 @@ int sqe(int num) {
     } else {
         for (int i = 0; i < (num/2); i++) {
             if (i*i == num) {
-                return i;
+                fin = i;
+                break;
             }
         }
     }
-
     return fin;
 }
 int main() {
