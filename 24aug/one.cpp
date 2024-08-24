@@ -6,24 +6,25 @@
 using namespace std;
 
 int sqe(int num) {
-    int fin = 0;
     if (num == 1) {
-        fin = 1;
+        return 1;
     } else {
-        for (int i = 0; i < (num/2); i++) {
+        for (int i = 1; i <= (num/2); i++) {
             if (i*i == num) {
-                fin = i;
-                break;
+                return i;
             }
         }
     }
-    return fin;
+    return 0;
 }
 int main() {
+    int num;
+    cout << "Enter the number you wish to generate square root of:" << " ";
+    cin >> num;
 
-    int res = sqe(4);
+    int res = sqe(num);
+
     cout << "The square root is: " << res << endl;
 
     return 0;
-
 }
