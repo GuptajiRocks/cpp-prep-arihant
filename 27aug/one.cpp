@@ -5,13 +5,15 @@
 #include <iostream>
 using namespace std;
 
-void fun(int n) {
-
-
-
+int fun() {
+    static int num = 7;
+    return num--;
 }
 
 int main() {
-    fun(3);
+    for(fun();fun();fun()) {
+        cout << fun();
+    }
+
     return 0;
 }
