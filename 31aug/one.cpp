@@ -25,12 +25,9 @@ void bubsort(employee arr[], int n) {
             break;
         }
     }
-
     for (int i = 0; i < n; i++) {
         cout <<"Name: " << arr[i].name << ", Salary: " << arr[i].salary << endl;
     }
-
-
 }
 
 int main() {
@@ -42,14 +39,10 @@ int main() {
     for (int i = 0; i < n; i++) {
         string tempn;
         int temsal;
-
         cin >> tempn;
         cin >> temsal;
-
         arr[i].name = tempn;
         arr[i].salary = temsal;
     }
-
     bubsort(arr, n);
-
 }
