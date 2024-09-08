@@ -18,14 +18,16 @@ int main() {
     head->next->next = new Node(19);
     head->next->next->next = new Node(3);
 
+    Node* newNode = new Node(10);
+    newNode->next = head;
+    head = newNode;
+
     Node* current = head;
 
     while (current != nullptr) {
         cout << current->data << " ";
         current = current->next;
     }
-
-
 
     //arr.push_back(head);
 
