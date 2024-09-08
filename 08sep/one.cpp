@@ -17,8 +17,11 @@ int main() {
     head->next = new Node(4);
     head->next->next = new Node(3);
 
-    arr.push_back(head);
+    cout << head->next->next->data;
 
-    int n = arr.size();
-    cout << n;
+
+
+    //arr.push_back(head);
+
+    
 }
