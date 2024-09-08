@@ -15,9 +15,15 @@ int main() {
     vector<Node*> arr;
     Node* head = new Node(5);
     head->next = new Node(4);
-    head->next->next = new Node(3);
+    head->next->next = new Node(19);
+    head->next->next->next = new Node(3);
 
-    cout << head->next->next->data;
+    Node* current = head;
+
+    while (current != nullptr) {
+        cout << current->data << " ";
+        current = current->next;
+    }
 
 
 
