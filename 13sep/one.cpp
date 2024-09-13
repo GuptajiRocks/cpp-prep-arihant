@@ -39,4 +39,6 @@ int main() {
 
     cout << "NULL" << endl;
 
+    delete [] head;
+    delete [] trav;
 }
