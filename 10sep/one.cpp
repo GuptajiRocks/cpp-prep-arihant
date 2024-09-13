@@ -7,30 +7,44 @@ using namespace std;
 
 struct Node {
     int data;
+    string name;
     Node* next;
-    Node(int val) {
+    Node(int val, string n) {
         data = val;
         next = nullptr;
+        name = n;
     }
 };
 
 int main() {
-    Node* head = new Node(5);
+    Node* head;
     int len;
     cin >> len;
     Node* temp = head;
+    int i = 1;
 
-    for (int i = 0; i < len-1; i++) {
-        int data;
-        cin >> data;
-        temp->next = new Node(data);
-        temp = temp->next;
+    do {
+        int td;
+        string n;
+
+    } while (i < len) {
+
     }
+
+    // for (int i = 0; i < len; i++) {
+    //     int data;
+    //     cin >> data;
+    //     string n;
+    //     cin >> n;
+    //
+    //     temp->next = new Node(data, n);
+    //     temp = temp->next;
+    // }
 
     Node* trav = head;
 
     for (int i = 0; i < len; i++) {
-        cout << trav->data << endl;
+        cout << trav->data << trav->name << endl;
         trav = trav->next;
     }
 }
