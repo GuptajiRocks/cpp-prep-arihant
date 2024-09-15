@@ -15,6 +15,7 @@ struct Node {
     }
 };
 
+
 int main() {
     int len;
     cin >> len;
