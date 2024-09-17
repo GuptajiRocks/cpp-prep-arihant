@@ -25,6 +25,29 @@ public:
 };
 
 int main() {
+    int len;
+    cin >> len;
+
+    int tc, te;
+    cin >> tc >> te;
+
+    Node* head = new Node(tc, te);
+    Node* temp = head;
+
+    for (int i = 1; i < len; i++) {
+        cin >> tc >> te;
+        temp->next = new Node(tc, te);
+        temp = temp->next;
+    }
+
+    Node* trav = head;
+
+    while (trav != nullptr) {
+        cout << trav->coeff << "x^" << trav->expo << " ";
+        trav = trav->next;
+    }
+
+
 
 
 }
