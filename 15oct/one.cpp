@@ -5,13 +5,17 @@
 using namespace std;
 
 class Node {
+public:
     int data;
     Node* next;
 
-
+    Node(int c) {
+        data = c;
+        next = nullptr;
+    }
 };
 
-void postfixeval() {
+void postfixevalone() {
     // 6 2 3 * / 3 4 * + 3 2 * -
     // Input Stack
     /* 6    6
@@ -30,6 +34,41 @@ void postfixeval() {
      *
      * Final answer evaluation is 7.
      */
+}
+
+class Polynomial {
+public:
+    Node* head;
+    Node* temp;
+
+    void addHead(int first) {
+        head = new Node(first);
+        temp = head;
+        temp = temp->next;
+    }
+
+    void addElem(int val) {
+        temp->next = new Node(val);
+        temp = temp->next;
+    }
+
+    void display() {
+        Node* trav = head;
+        while (trav!=nullptr) {
+            cout << trav->data << " ";
+            trav = trav->next;
+        }
+    }
+};
+
+int main() {
+    Polynomial s1;
+    s1.addHead(10);
+    s1.addElem(12);
+
+    s1.display();
+
+    return 0;
 }
 
 
