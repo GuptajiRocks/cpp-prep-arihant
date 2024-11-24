@@ -6,7 +6,7 @@
 using namespace std;
 
 
-int main() {
+void inb_sort() {
     int len;
     cout << "Enter the number of elements you wish to enter: ";
     cin >> len;
@@ -31,5 +31,27 @@ int main() {
         cout << w << " ";
     }
     cout << endl;
+}
 
+void miss_num() {
+    int arr[] = {1,2,3,5};
+    int n = 5;
+    int len = sizeof(arr)/sizeof(arr[0]);
+
+    int ts = (n*(n+1))/2;
+    int c = 0;
+
+    for (int i = 0; i < len ; i++) {
+        c = c + arr[i];
+    }
+
+    if (c == ts) {
+        cout << "No element is missing.";
+    } else {
+        cout << "The missing element is: " << (ts-c) << " .\n";
+    }
+}
+
+int main() {
+    miss_num();
 }
