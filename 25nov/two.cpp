@@ -7,7 +7,7 @@ using namespace std;
 
 // trying to build heap and do shit lol
 
-int main() {
+void call_min_heap() {
     priority_queue<int, vector<int>, greater<int>> minHeap;
     minHeap.push(10);
     minHeap.push(5);
@@ -19,5 +19,23 @@ int main() {
         minHeap.pop();
     }
     cout << endl;
+}
+
+void call_max_heap() {
+    priority_queue<int> maxHeap;
+    maxHeap.push(10);
+    maxHeap.push(5);
+    maxHeap.push(15);
+    maxHeap.push(2);
+
+    while (!maxHeap.empty()) {
+        cout << maxHeap.top() << " ";
+        maxHeap.pop();
+    }
+    cout << endl;
+}
+
+int main() {
+    call_max_heap();
     return 0;
 }
