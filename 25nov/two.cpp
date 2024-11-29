@@ -35,7 +35,23 @@ void call_max_heap() {
     cout << endl;
 }
 
+class Family {
+public:
+    Family() {
+        cout << "Constructor called!";
+    }
+};
+
+class Jesus : Family {
+public:
+    Jesus() {
+        cout << "Nigga? ";
+        
+    }
+};
+
 int main() {
-    call_max_heap();
+    Jesus j1;
     return 0;
+
 }
