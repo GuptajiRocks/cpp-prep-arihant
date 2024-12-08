@@ -46,18 +46,23 @@ void addEnd(Node* head, int c) {
     trav->next = new Node(c);
 }
 
-void eleDel(Node* head) {
-    Node* prev;
+Node* eleDel(Node* head) {
+    // Node* prev;
     Node* trav = head;
 
-    while (trav->next != nullptr) {
+    while (trav->next->next != nullptr) {
         trav = trav->next;
     }
 
-    prev = trav;
-    Node* tempNode = prev->next;
-    delete tempNode;
     trav->next = nullptr;
+    // delete (trav->next);
+    // trav->next = nullptr;
+    // prev = trav;
+    // Node* tempNode = prev->next;
+    // delete tempNode;
+    // prev->next = nullptr;
+
+    return head;
 }
 
 void c2() {
@@ -84,7 +89,7 @@ void c2() {
         }
     }
 
-    eleDel(head);
+    head = eleDel(head);
 
     Node* trav = head;
     while (trav != nullptr) {
