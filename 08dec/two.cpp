@@ -48,7 +48,6 @@ private:
         } else {
             node->left = insertRec(node->left, val);
         }
-
         return node;
     }
     // now that the binary search tree has been created, shit is gonna get good.
@@ -85,8 +84,11 @@ void j1() {
     bst.searchBST(chc);
 }
 
+void j2() {
+
+}
 
 int main() {
-    j1();
+    // j1();
     return 0;
 }
