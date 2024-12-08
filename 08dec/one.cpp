@@ -14,10 +14,29 @@ public:
         data = c;
         next = nullptr;
     }
+
+    Node() {
+
+    }
 };
 
 void c1() {
     // linked list element delete
+}
+
+void eleDel(Node* head, int c) {
+    Node* trav = head;
+
+    Node* tempdel;
+    while (trav != nullptr) {
+        if (trav->data == c) {
+            tempdel = trav;
+            break;
+        }
+        trav = trav->next;
+    }
+
+
 }
 
 void c2() {
