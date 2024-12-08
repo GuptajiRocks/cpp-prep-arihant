@@ -27,16 +27,23 @@ void c1() {
 void eleDel(Node* head, int c) {
     Node* trav = head;
 
-    Node* tempdel;
-    while (trav != nullptr) {
-        if (trav->data == c) {
-            tempdel = trav;
-            break;
-        }
+    // Node* tempdel;
+    // Node* prev;
+    // while (trav != nullptr) {
+    //     if (trav->data == c) {
+    //         tempdel = trav;
+    //         break;
+    //     }
+    //     trav = trav->next;
+    // }
+
+    // first trying to add element at the last
+
+    while (trav->next != nullptr) {
         trav = trav->next;
     }
 
-
+    trav->next = new Node(c);
 }
 
 void c2() {
@@ -62,6 +69,8 @@ void c2() {
             jesus->next = newNode;
         }
     }
+
+    eleDel(head, 5);
 
     Node* trav = head;
     while (trav != nullptr) {
