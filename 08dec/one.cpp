@@ -24,7 +24,7 @@ void c1() {
     // linked list element delete
 }
 
-void eleDel(Node* head, int c) {
+void addEnd(Node* head, int c) {
     Node* trav = head;
 
     // Node* tempdel;
@@ -44,6 +44,20 @@ void eleDel(Node* head, int c) {
     }
 
     trav->next = new Node(c);
+}
+
+void eleDel(Node* head) {
+    Node* prev;
+    Node* trav = head;
+
+    while (trav->next != nullptr) {
+        trav = trav->next;
+    }
+
+    prev = trav;
+    Node* tempNode = prev->next;
+    delete tempNode;
+    trav->next = nullptr;
 }
 
 void c2() {
@@ -70,7 +84,7 @@ void c2() {
         }
     }
 
-    eleDel(head, 5);
+    eleDel(head);
 
     Node* trav = head;
     while (trav != nullptr) {
