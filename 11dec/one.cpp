@@ -13,6 +13,14 @@ struct gawk {
     void gawk_gawk() {
         cout << "Gawk Gawk " << num << endl;
     }
+
+    void check_hawk_tuah() {
+        if (num > 2999) {
+            cout << "You gotta spit on that thang. HAWK TUAHHHH";
+        } else {
+            cout << "Go fuck off bitch ass nigga";
+        }
+    }
 };
 
 int main() {
@@ -22,4 +30,5 @@ int main() {
 
     gawk gawk1(n);
     gawk1.gawk_gawk();
+    gawk1.check_hawk_tuah();
 }
